@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <changeSet author="Shree" id="insert-section-table">
+        <preConditions  onFail="MARK_RAN">
+            <sqlCheck  expectedResult="0">select count(*) from section_type</sqlCheck>
+        </preConditions>
+        <insert tableName="owner_skill_status">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="statusDescription" value="Available"/>
+        </insert>
+		<insert tableName="owner_skill_status">
+            <column name="pk_id" value="2" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="statusDescription" value="bench(Not Available)"/>
+        </insert>
+
+        <insert tableName="owner_skill_level">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="levelDescription" value="Lead"/>
+        </insert>
+        <insert tableName="owner_skill_level">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="levelDescription" value="Senior"/>
+        </insert>
+        <insert tableName="owner_skill_level">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="levelDescription" value="Junior"/>
+        </insert>
+        <insert tableName="owner_skill_level">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="levelDescription" value="Mid"/>
+        </insert>
+
+        <insert tableName="owner_skill_technologies">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="technologyValues" value="C++"/>
+        </insert>
+        <insert tableName="owner_skill_technologies">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="technologyValues" value="ETL"/>
+        </insert>
+
+        <insert tableName="owner_skill_roles">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="rolesDescription" value="Architecture"/>
+        </insert>
+        <insert tableName="owner_skill_roles">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="rolesDescription" value="Design"/>
+        </insert>
+
+        <insert tableName="owner_skill_domain">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="rolesDescription" value="Banking"/>
+        </insert>
+        <insert tableName="owner_skill_domain">
+            <column name="pk_id" value="1" />
+            <column name="changed_by"  value="1"/>
+            <column name="changed_at"  valueDate="${now}"/>
+            <column name="created_at"  valueDate="${now}"/>
+            <column name="created_by"  value="1"/>
+            <column name="rolesDescription" value="Healthcare"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
+

@@ -1,0 +1,178 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Shree (generated)" id="1641378536613-1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_status"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_status">
+            <column name="statusDescription" type="VARCHAR(50)" >
+                <constraints  nullable="false"/>
+            </column>
+            <column name="statusDescription" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Shree (generated)" id="1641378536613-2">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_status"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_status">
+            <column name="pk_id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="deleted_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_by" type="BIGINT"/>
+            <column name="created_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="created_by" type="BIGINT"/>
+            <column name="statusDescription" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Shree (generated)" id="1641378536613-1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_level"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_level">
+            <column name="levelDescription" type="VARCHAR(50)" >
+                <constraints  nullable="false"/>
+            </column>
+            <column name="levelDescription" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Shree (generated)" id="1641378536613-2">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_level"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_level">
+            <column name="pk_id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="deleted_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_by" type="BIGINT"/>
+            <column name="created_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="created_by" type="BIGINT"/>
+            <column name="levelDescription" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet author="Shree (generated)" id="1641378536613-1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_technologies"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_technologies">
+            <column name="technologyValues" type="VARCHAR(50)" >
+                <constraints  nullable="false"/>
+            </column>
+            <column name="technologyValues" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Shree (generated)" id="1641378536613-2">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_technologies"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_technologies">
+            <column name="pk_id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="deleted_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_by" type="BIGINT"/>
+            <column name="created_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="created_by" type="BIGINT"/>
+            <column name="technologyValues" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Shree (generated)" id="1641378536613-1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_roles"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_roles">
+            <column name="rolesDescription" type="VARCHAR(50)" >
+                <constraints  nullable="false"/>
+            </column>
+            <column name="rolesDescription" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Shree (generated)" id="1641378536613-2">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_roles"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_roles">
+            <column name="pk_id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="deleted_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_by" type="BIGINT"/>
+            <column name="created_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="created_by" type="BIGINT"/>
+            <column name="rolesDescription" type="VARCHAR(255)"/>
+        </createTable>
+
+
+    <changeSet author="Shree (generated)" id="1641378536613-1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_domain"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_domain">
+            <column name="domainValues" type="VARCHAR(50)" >
+                <constraints  nullable="false"/>
+            </column>
+            <column name="rolesDescription" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Shree (generated)" id="1641378536613-2">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="owner_skill_domain"/>
+            </not>
+        </preConditions>
+        <createTable tableName="owner_skill_domain">
+            <column name="pk_id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="deleted_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="changed_by" type="BIGINT"/>
+            <column name="created_at" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="created_by" type="BIGINT"/>
+            <column name="domainValues" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
